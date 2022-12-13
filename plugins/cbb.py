@@ -10,12 +10,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>This Person</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ Source Code : <a href='https://github.com/CodeXBotz/File-Sharing-Bot'>Click here</a>\n○ Channel : @CodeXBotz\n○ Support Group : @CodeXBotzSupport</b>",
+            text = f"<b>📕 𝐀𝐛𝐨𝐮𝐭 𝐌𝐞 ,\n\n○ ᴍʏ ɴᴀᴍᴇ : <a href='https://t.me/bots_infinity'>ᴄᴏʟʟᴇᴄᴛᴏʀ ʟᴋ | ∞™</a>\n\n○ ʟᴀɴɢᴜᴀɢᴇ: <code>ᴘʏᴛʜᴏɴ</code> \n\n○ ғʀᴀᴍᴇᴡᴏʀᴋ: <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a>\n\n ○ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : <a href='https://github.com/CodeXBotz/File-Sharing-Bot'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n\n○ ᴠᴇʀsɪᴏɴ : 2.0\n\n○ ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/bots_infinity'>ɪɴғɪɴɪᴛʏ ʙᴏᴛs</a></b>\n\n<b><a href=https://t.me/bots_infinity>©️ ɪɴғɪɴɪᴛʏ ʙᴏᴛs</a></b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton("🔻 ᴄʟᴏsᴇ", callback_data = "close")
                     ]
                 ]
             )
