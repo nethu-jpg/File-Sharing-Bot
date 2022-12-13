@@ -59,6 +59,7 @@ async def start_command(client: Client, message: Message):
         temp_msg = await message.reply("Please wait...")
         try:
             messages = await get_messages(client, ids)
+            await message.reply_text(ADVERT_TEXT)
         except:
             await message.reply_text("Something went wrong..!")
             return
@@ -96,16 +97,16 @@ async def start_command(client: Client, message: Message):
         )
         await message.reply_video(
             video = random.choice(VIDS),
-            text = START_MSG.format(
+            caption = START_MSG.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,
                 mention = message.from_user.mention,
                 id = message.from_user.id
             ),
-            reply_markup = reply_markup,
-            disable_web_page_preview = True,
-            quote = True
+            reply_markup=reply_markup,
+            quote=True,
+            parse_mode='html'
         )
         return
 
